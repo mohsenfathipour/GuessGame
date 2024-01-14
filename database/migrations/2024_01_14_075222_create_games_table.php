@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('try')->default(0);
             $table->enum('status_enum',array_column(GameStatusEnum::cases(),'value'))->default(GameStatusEnum::Doing->value);
             $table->timestamp('started_at')->useCurrent();
-            $table->timestamp('end_at')->useCurrent();
+            $table->timestamp('end_at')->nullable(true);
             $table->timestamps();
             $table->softDeletes();
         });

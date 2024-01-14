@@ -2,7 +2,7 @@
 if (!function_exists('generateUniqueNumber')) {
     function generateUniqueNumber(int $length): int
     {
-        $digits = range(0, 9);
+        $digits = range(1, 9);
         shuffle($digits);
 
         // Take the first 'length' digits to form a unique number
